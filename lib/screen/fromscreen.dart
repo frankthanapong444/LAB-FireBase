@@ -3,20 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class FormScreen extends StatefulWidget {
-  const FormScreen({Key? key}) : super(key: key);
+class FromScreen extends StatefulWidget {
+  const FromScreen({Key? key}) : super(key: key);
 
   @override
-  State<FormScreen> createState() => _FormScreenState();
+  _FromScreenState createState() => _FromScreenState();
 }
 
-class _FormScreenState extends State<FormScreen> {
+class _FromScreenState extends State<FromScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("แบบฟอร์มรายการ"),
-      ),
+      appBar: AppBar(title: Text("แบบฟอร์มบันทึกคะแนนสอบ")),
       body: Container(
         padding: EdgeInsets.all(20),
         child: Form(
@@ -25,7 +23,7 @@ class _FormScreenState extends State<FormScreen> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "รายการ",
+                  "ชื่อ",
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(),
@@ -33,7 +31,7 @@ class _FormScreenState extends State<FormScreen> {
                   height: 15,
                 ),
                 Text(
-                  "รายรับ",
+                  "นามสกุล",
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(),
@@ -41,7 +39,7 @@ class _FormScreenState extends State<FormScreen> {
                   height: 15,
                 ),
                 Text(
-                  "รายจ่าย",
+                  "Email",
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(),
@@ -49,7 +47,7 @@ class _FormScreenState extends State<FormScreen> {
                   height: 15,
                 ),
                 Text(
-                  "คงเหลือ",
+                  "คะแนน",
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(),
